@@ -77,6 +77,8 @@ services:
   mongo:
     image: mongo
     restart: always
+    ports:
+      - "27017:27017"
 
   hive-metastore-postgresql:
     image: bde2020/hive-metastore-postgresql:2.3.0
