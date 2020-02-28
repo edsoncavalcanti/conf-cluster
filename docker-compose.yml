@@ -74,12 +74,6 @@ services:
       net_pet:
         ipv4_address: 172.27.1.8
 
-  mongo:
-    image: mongo
-    restart: always
-    ports:
-      - "27017:27017"
-
   hive-metastore-postgresql:
     image: bde2020/hive-metastore-postgresql:2.3.0
     container_name: hive-metastore-postgresql
@@ -191,6 +185,15 @@ services:
     networks:
       net_pet:
         ipv4_address: 172.27.1.17  
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    networks:
+      net_pet:
+        ipv4_address: 172.27.1.18
 
 networks:
   net_pet:
