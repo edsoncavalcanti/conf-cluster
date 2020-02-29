@@ -1,14 +1,6 @@
 version: '3' 
 services:
 
-  spark-notebook:
-    image: jupyter/pyspark-notebook:3deefc7d16c7
-    container_name: spark-notebook
-    ports:
-      - "8888:8888"
-    volumes:
-      - ./notebooks:/home/jovyan/work/notebooks/
-
   namenode:
     image: bde2020/hadoop-namenode:2.0.0-hadoop2.7.4-java8
     container_name: namenode
