@@ -34,8 +34,8 @@ class Consumer(threading.Thread):
         stream = KafkaConsumer(bootstrap_servers='localhost:9092',
                                auto_offset_reset='latest')
         stream.subscribe(['topic'])
-	for tuple in stream:
-		print(tuple)
+        for tuple in stream:
+            print(tuple)
 
 
 if __name__ == '__main__':
